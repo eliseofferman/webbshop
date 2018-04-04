@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'helvetica' , sans-serif;
+}
+
+h1{
+  color: #65676b;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1,5;
+}
+
+h4{
+  color: #171b1f;
+  line-height: 23px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+p{
+  color: #171b1f;
+  line-height: 23px;
+  font-size: 13px;
+  font-weight: 400;
+}
+/*
+Category Page css
+h1{
+font-size: 25px;
+line-height: 33px;
+color: #171b1f;
+font-weight: 400;
+}
+
+
+
+Product Page
+h1{
+color: #171b1f;
+line-height: 40px;
+font-size: 25px;
+font-weight: 400;
+}
+
+.button{
+  color: #65676b;
+  line-height: 20px;
+  font-size: 25px;
+  font-weight: 600;
+} */
