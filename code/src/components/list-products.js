@@ -4,7 +4,6 @@ import "./list-products.css"
 
 class ListProducts extends React.Component {
   renderproducts() {
-    console.log(this.props.products)
     const products = this.props.products.map(item => <Product item={item} />) // Skapa div
     // invinseble return before <
 
@@ -12,7 +11,13 @@ class ListProducts extends React.Component {
   }
 
   render() {
-    return <div className="list-products">{this.renderproducts()}</div>
+    console.log(this.props.products.length)
+    return (
+      <div>
+        <h4>All products ({this.props.products.length})</h4>
+        <div className="list-products">{this.renderproducts()}</div>
+      </div>
+    )
   }
 }
 
