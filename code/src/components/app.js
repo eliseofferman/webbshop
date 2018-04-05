@@ -2,7 +2,6 @@ import React from "react"
 import ListProducts from "./list-products.js"
 
 class App extends React.Component {
-
   constructor(props) {
     super(props)
     this.state = {
@@ -24,7 +23,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <ListProducts products={this.state.allProducts} text="test test" user={[0, 1, 2, 3]}/>
+        <ListProducts products={this.state.allProducts} />
 
         <h1>Find me in src/app.js!</h1>
         <h3> All products</h3>
@@ -33,7 +32,6 @@ class App extends React.Component {
       </div>
     )
   }
-
 }
 
 export default App
