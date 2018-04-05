@@ -1,0 +1,41 @@
+.product {
+  width: 30%;
+  background-color: hotpink;
+  margin-bottom: 20px;
+}
+.product-image img {
+  height: 300px;
+  width: 250px;
+}
+
+.product-price {
+}
+
+.product-title {
+}
+
+/*
+Category Page css
+h1{
+font-size: 25px;
+line-height: 33px;
+color: #171b1f;
+font-weight: 400;
+}
+
+
+
+Product Page
+h1{
+color: #171b1f;
+line-height: 40px;
+font-size: 25px;
+font-weight: 400;
+}
+
+.button{
+  color: #65676b;
+  line-height: 20px;
+  font-size: 25px;
+  font-weight: 600;
+} */

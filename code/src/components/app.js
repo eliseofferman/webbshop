@@ -1,6 +1,9 @@
 import React from "react"
 import ListProducts from "./list-products.js"
 
+import Header from "./header"
+import "./app.css"
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -22,7 +25,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="main-container">
+        <Header />
         <ListProducts products={this.state.allProducts} />
 
         <h1>Find me in src/app.js!</h1>

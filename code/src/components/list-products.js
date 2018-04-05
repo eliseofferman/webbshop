@@ -1,19 +1,18 @@
 import React from "react"
+import Product from "./product"
+import "./list-products.css"
 
 class ListProducts extends React.Component {
   renderproducts() {
-    const products = this.props.products.map(item => (
-      <div>
-        {item.title} {item.price}
-        <img src={item.images[0].url} />
-      </div>
-    ))
+    console.log(this.props.products)
+    const products = this.props.products.map(item => <Product item={item} />) // Skapa div
+    // invinseble return before <
 
     return products
   }
 
   render() {
-    return <div className="ListProducts">{this.renderproducts()}</div>
+    return <div className="list-products">{this.renderproducts()}</div>
   }
 }
 
