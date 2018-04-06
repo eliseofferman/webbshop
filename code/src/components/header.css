@@ -1,4 +1,8 @@
 .header-image img {
-  height: auto;
-  width: 120px;
+	height: 50px;
+	width: auto;
+}
+
+.header-image {
+	display: flex;
 }

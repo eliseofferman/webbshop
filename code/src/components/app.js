@@ -38,8 +38,10 @@ class App extends React.Component {
     return (
       <div className="main-container">
         <Header />
-        <ListProducts products={this.state.allProducts} />
-        <Category categorys={this.state.allCategories} />
+        <div className="top-container">
+          <Category categorys={this.state.allCategories} />
+          <ListProducts products={this.state.allProducts} />
+        </div>
       </div>
     )
   }

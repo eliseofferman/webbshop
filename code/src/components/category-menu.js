@@ -1,5 +1,5 @@
 import React from "react"
-// import "./category-menu.css"
+import "./category-menu.css"
 
 class Category extends React.Component {
   renderCategorys() {
@@ -8,7 +8,12 @@ class Category extends React.Component {
     return htmlCategoryes
   }
   render() {
-    return <div>{this.renderCategorys()}</div>
+    return (
+      <div className="category-left">
+        <h5>Categorys</h5>
+        {this.renderCategorys()}
+      </div>
+    )
   }
 }
 
