@@ -1,4 +1,5 @@
 import React from "react"
+import { BrowserRouter, Route, Link } from "react-router-dom"
 import "./category-menu.css"
 
 class Category extends React.Component {
@@ -11,7 +12,7 @@ class Category extends React.Component {
     return (
       <div className="category-left">
         <h5>Categorys</h5>
-        {this.renderCategorys()}
+        <Link to="/products"> {this.renderCategorys()} </Link>
       </div>
     )
   }

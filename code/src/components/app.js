@@ -1,7 +1,9 @@
 import React from "react"
+import { BrowserRouter, Route, Link } from "react-router-dom"
 import ListProducts from "./list-products.js"
 import Category from "./category-menu"
 import Header from "./header"
+import CategoryList from "./category-list"
 import "./app.css"
 
 class App extends React.Component {
@@ -36,13 +38,19 @@ class App extends React.Component {
   render() {
     console.log(this.state)
     return (
-      <div className="main-container">
-        <Header />
-        <div className="top-container">
-          <Category categorys={this.state.allCategories} />
-          <ListProducts products={this.state.allProducts} />
+      <BrowserRouter>
+        <div className="main-container">
+          <Header />
+          <div className="top-container">
+            <Category categorys={this.state.allCategories} />
+            <ListProducts products={this.state.allProducts} />
+          </div>
+          <CategoryList />
+          <Route path="/products/:category" component={Category} />
         </div>
-      </div>
+
+
+      </BrowserRouter>
     )
   }
 }
