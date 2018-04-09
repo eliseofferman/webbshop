@@ -45,8 +45,8 @@ class App extends React.Component {
             <Category categorys={this.state.allCategories} />
             <ListProducts products={this.state.allProducts} />
           </div>
-          <CategoryList />
-          <Route path="/products/:category" component={Category} />
+          {/* <CategoryList /> */}
+          <Route path="/category/:category" component={CategoryList} />
         </div>
 
 

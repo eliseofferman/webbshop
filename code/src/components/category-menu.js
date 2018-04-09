@@ -6,13 +6,19 @@ class Category extends React.Component {
   renderCategorys() {
     const htmlCategoryes = this.props.categorys.map(categoryItem => <div>{categoryItem.title}</div>)
 
+
     return htmlCategoryes
+
   }
   render() {
+    // console.log(this.props.htmlCategoryes);
     return (
       <div className="category-left">
         <h5>Categorys</h5>
-        <Link to="/products"> {this.renderCategorys()} </Link>
+        {/* {this.renderCategorys()} */}
+
+        <Link to="/category/banana"> banana </Link>
+        <Link to="/category/orange"> orange </Link>
       </div>
     )
   }
