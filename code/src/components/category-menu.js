@@ -15,10 +15,10 @@ class Category extends React.Component {
     return (
       <div className="category-left">
         <h5>Categorys</h5>
-        {/* {this.renderCategorys()} */}
+        <Link to="/category/test"> {this.renderCategorys()} </Link>
 
-        <Link to="/category/banana"> banana </Link>
-        <Link to="/category/orange"> orange </Link>
+        {/* <Link to="/category/banana"> banana </Link>
+        <Link to="/category/orange"> orange </Link> */}
       </div>
     )
   }

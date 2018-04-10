@@ -46,7 +46,7 @@ class App extends React.Component {
             <ListProducts products={this.state.allProducts} />
           </div>
           {/* <CategoryList /> */}
-          <Route path="/category/:category" component={CategoryList} />
+          <Route exact path="/category/:category" component={CategoryList} />
         </div>
 
 
