@@ -43,7 +43,10 @@ class App extends React.Component {
           <Header />
           <div className="top-container">
             <Category categorys={this.state.allCategories} />
-            <ListProducts products={this.state.allProducts} />
+            <Route exact path="/" component={Hero} />
+            {/* <ListProducts products={this.state.allProducts} /> */}
+            <Route exact path="/" component={ListProducts} products={this.state.allProducts} />
+            
           </div>
           {/* <CategoryList /> */}
           <Route exact path="/category/:category" component={CategoryList} />
