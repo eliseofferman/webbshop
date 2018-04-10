@@ -10,20 +10,20 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      allProducts: [],
+      // allProducts: [],
       allCategories: []
     }
   }
 
   componentDidMount() {
-    fetch("https://api.tictail.com/v1.26/stores/5HSQ/products")
-      .then(respons => respons.json())
-      .then(respons => {
-        this.setState({ allProducts: respons })
-      })
-      .catch(error => {
-        console.log(error)
-      })
+    // fetch("https://api.tictail.com/v1.26/stores/5HSQ/products")
+    //   .then(respons => respons.json())
+    //   .then(respons => {
+    //     this.setState({ allProducts: respons })
+    //   })
+    //   .catch(error => {
+    //     console.log(error)
+    //   })
 
     fetch("https://api.tictail.com/v1.26/stores/5HSQ/categories")
       .then(respons => respons.json())
@@ -45,8 +45,9 @@ class App extends React.Component {
             <Category categorys={this.state.allCategories} />
 
             {/* <ListProducts products={this.state.allProducts} /> */}
-            <Route exact path="/" component={ListProducts} products={this.state.allProducts} />
-            
+
+            <Route exact path="/" component={ListProducts} />
+
           </div>
           {/* <CategoryList /> */}
           <Route  path="/category/:category" component={CategoryList} />
