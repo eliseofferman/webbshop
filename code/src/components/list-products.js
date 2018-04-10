@@ -11,7 +11,7 @@ class ListProducts extends React.Component {
   }
 
   render() {
-    console.log(this.props.products.length)
+    // console.log(this.props.products.length)
     return (
       <div>
         <h4>All products ({this.props.products.length})</h4>
