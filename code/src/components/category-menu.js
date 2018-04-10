@@ -4,7 +4,12 @@ import "./category-menu.css"
 
 class Category extends React.Component {
   renderCategorys() {
-    const htmlCategoryes = this.props.categorys.map(categoryItem => <div>{categoryItem.title}</div>)
+    const htmlCategoryes = this.props.categorys.map(categoryItem =>
+      <div>
+        <Link to={`/category/${categoryItem.title}`}>
+          {categoryItem.title}
+        </Link>
+      </div>)
 
 
     return htmlCategoryes
@@ -15,7 +20,7 @@ class Category extends React.Component {
     return (
       <div className="category-left">
         <h5>Categorys</h5>
-        <Link to="/category/test"> {this.renderCategorys()} </Link>
+        {this.renderCategorys()}
 
         {/* <Link to="/category/banana"> banana </Link>
         <Link to="/category/orange"> orange </Link> */}
