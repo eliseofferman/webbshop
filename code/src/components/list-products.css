@@ -3,3 +3,9 @@
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 10px;
 }
+
+@media (max-width: 600px) {
+	.list-products {
+		grid-template-columns: 1fr;
+	}
+}

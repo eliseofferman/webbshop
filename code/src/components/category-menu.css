@@ -3,3 +3,16 @@
 	border-right: 1px solid tomato;
 	padding-right: 30px;
 }
+
+@media (max-width: 600px) {
+	.category-left {
+		border-right: none;
+		padding-right: 0;
+		display: flex;
+		justify-content: space-between;
+		margin: 0;
+		width: 100%;
+	}
+	.category-left a {
+	}
+}

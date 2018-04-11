@@ -12,3 +12,9 @@
 	display: flex;
 	margin-top: 30px;
 }
+
+@media (max-width: 600px) {
+	.container-wrapper {
+		flex-direction: column;
+	}
+}
