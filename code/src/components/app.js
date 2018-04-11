@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Link } from "react-router-dom"
 import ListProducts from "./list-products.js"
 import Category from "./category-menu"
 import Header from "./header"
-import CategoryPage from "./category-page"
+import ViewProduct from "./product-page"
 import "./app.css"
 
 class App extends React.Component {
@@ -50,6 +50,7 @@ class App extends React.Component {
           </div>
           {/* <CategoryList /> */}
           <Route path="/category/:categoryXXX" component={ListProducts} />
+          <Route path="/product/:productID" component={ViewProduct} />
         </div>
       </BrowserRouter>
     )

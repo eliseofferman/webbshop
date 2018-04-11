@@ -7,7 +7,9 @@ class ListProducts extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      allProducts: []
+      allProducts: [],
+
+      categoryNumber: null
       // allCategories: []
     }
   }
@@ -23,10 +25,6 @@ class ListProducts extends React.Component {
       })
   }
 
-  componentWillReceiveProps(nextprop) {
-    console.log(nextprop)
-  }
-
   renderproducts(categoryName) {
     const products = this.state.allProducts
       .filter(product => {
@@ -39,21 +37,27 @@ class ListProducts extends React.Component {
         return false
       })
 
-      .map(product => <Product item={product} />) // Skapa div
+      .map(product => (
+        <Link to={`/product/${product.id}`}>
+          <Product item={product} />
+        </Link>
+      )) // Skapa div
     // invinseble return before <
 
     return products
   }
 
   render() {
-    // console.log(this.props.products.length)
-    console.log(this.props.match.params.categoryXXX)
     const categoryName = this.props.match.params.categoryXXX
+
+    const nrOfProducts = this.renderproducts(categoryName).length
+
     return (
       <div>
-        <h4 />
-        <Link to="/">
-          <h4>All products ({this.state.allProducts.length})</h4>
+        <Link to={`/categories/${categoryName}`}>
+          <h4>
+            {categoryName}({nrOfProducts})
+          </h4>
         </Link>
         <div className="list-products">{this.renderproducts(categoryName)}</div>
       </div>
