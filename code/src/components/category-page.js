@@ -11,13 +11,13 @@ class CategoryPage extends React.Component {
     }
   }
 
-  componentDidMount() {}
-
-  fetch("https://api.tictail.com/v1.26/stores/5HSQ/categories")
-    .then(respons => respons.json())
-    .then(respons2 => {
-      this.setState({ allCategories: respons2 })
-    })
+  componentDidMount() {
+    fetch("https://api.tictail.com/v1.26/stores/5HSQ/categories")
+      .then(respons => respons.json())
+      .then(respons2 => {
+        this.setState({ allCategories: respons2 })
+      })
+  }
 
   render() {
     return <div />

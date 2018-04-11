@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import Product from "./product"
 import "./list-products.css"
 
@@ -20,10 +21,25 @@ class ListProducts extends React.Component {
       .catch(error => {
         console.log(error)
       })
-    }
+  }
 
-  renderproducts() {
-    const products = this.state.allProducts.map(item => <Product item={item} />) // Skapa div
+  componentWillReceiveProps(nextprop) {
+    console.log(nextprop)
+  }
+
+  renderproducts(categoryName) {
+    const products = this.state.allProducts
+      .filter(product => {
+        if (!categoryName) {
+          return true
+        }
+        if (categoryName === product.categories[0].title) {
+          return true
+        }
+        return false
+      })
+
+      .map(product => <Product item={product} />) // Skapa div
     // invinseble return before <
 
     return products
@@ -31,10 +47,15 @@ class ListProducts extends React.Component {
 
   render() {
     // console.log(this.props.products.length)
+    console.log(this.props.match.params.categoryXXX)
+    const categoryName = this.props.match.params.categoryXXX
     return (
       <div>
-        <h4>All products ({this.state.allProducts.length})</h4>
-        <div className="list-products">{this.renderproducts()}</div>
+        <h4 />
+        <Link to="/">
+          <h4>All products ({this.state.allProducts.length})</h4>
+        </Link>
+        <div className="list-products">{this.renderproducts(categoryName)}</div>
       </div>
     )
   }
