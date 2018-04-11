@@ -7,3 +7,8 @@
 .top-container {
 	display: flex;
 }
+
+.container-wrapper {
+	display: flex;
+	margin-top: 30px;
+}

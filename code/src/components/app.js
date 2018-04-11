@@ -41,16 +41,17 @@ class App extends React.Component {
       <BrowserRouter>
         <div className="main-container">
           <Header />
-          <div className="top-container">
-            <Category categorys={this.state.allCategories} />
+          <div className="container-wrapper">
+            <div className="top-container">
+              <Category categorys={this.state.allCategories} />
+            </div>
 
-            {/* <ListProducts products={this.state.allProducts} /> */}
-
-            <Route exact path="/" component={ListProducts} />
+            <div className="content">
+              <Route exact path="/" component={ListProducts} />
+              <Route path="/category/:categoryXXX" component={ListProducts} />
+              <Route path="/product/:productID" component={ViewProduct} />
+            </div>
           </div>
-          {/* <CategoryList /> */}
-          <Route path="/category/:categoryXXX" component={ListProducts} />
-          <Route path="/product/:productID" component={ViewProduct} />
         </div>
       </BrowserRouter>
     )

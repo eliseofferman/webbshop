@@ -47,6 +47,20 @@ class ListProducts extends React.Component {
     return products
   }
 
+  renderBreadCrumbs() {
+    const isHomePage = !this.props.match.params.categoryXXX
+
+    if (isHomePage) {
+      return "Home/"
+    }
+
+    return (
+      <div>
+        <Link to="/">Home/</Link> {this.props.match.params.categoryXXX}
+      </div>
+    )
+  }
+
   render() {
     const categoryName = this.props.match.params.categoryXXX
 
@@ -54,11 +68,10 @@ class ListProducts extends React.Component {
 
     return (
       <div>
-        <Link to={`/categories/${categoryName}`}>
-          <h4>
-            {categoryName}({nrOfProducts})
-          </h4>
-        </Link>
+        <h4>
+          {this.renderBreadCrumbs()}
+          {/* All {categoryName}({nrOfProducts}) */}
+        </h4>
         <div className="list-products">{this.renderproducts(categoryName)}</div>
       </div>
     )

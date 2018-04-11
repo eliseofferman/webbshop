@@ -1,30 +1,30 @@
 .product {
-  width: 30%;
-  background-color: hotpink;
-  margin-bottom: 20px;
-  padding: 10px;
+	height: 100%;
+	width: 100%;
+	background-color: hotpink;
+	padding: 10px;
 }
 .product-image {
-  text-align: center;
+	text-align: center;
 }
 .product-image img {
-  height: 300px;
-  width: 250px;
+	height: auto;
+	width: 100%;
 }
 
 .product-price {
-  display: flex;
+	display: flex;
 }
 
 .product-title {
 }
 
 .original-price {
-  text-decoration: line-through;
+	text-decoration: line-through;
 }
 
 .sales-price {
-  color: tomato;
+	color: tomato;
 }
 
 /*

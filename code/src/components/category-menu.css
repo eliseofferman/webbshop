@@ -1,4 +1,5 @@
 .category-left {
 	margin-right: 30px;
-	margin-top: 60px;
+	border-right: 1px solid tomato;
+	padding-right: 30px;
 }
