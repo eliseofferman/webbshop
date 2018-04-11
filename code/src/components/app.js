@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Link } from "react-router-dom"
 import ListProducts from "./list-products.js"
 import Category from "./category-menu"
 import Header from "./header"
-import CategoryList from "./category-list"
+import CategoryPage from "./category-page"
 import "./app.css"
 
 class App extends React.Component {
@@ -47,13 +47,10 @@ class App extends React.Component {
             {/* <ListProducts products={this.state.allProducts} /> */}
 
             <Route exact path="/" component={ListProducts} />
-
           </div>
           {/* <CategoryList /> */}
-          <Route  path="/category/:category" component={CategoryList} />
+          <Route path="/category/:category" component={CategoryList} />
         </div>
-
-
       </BrowserRouter>
     )
   }
