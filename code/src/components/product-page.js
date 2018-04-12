@@ -29,10 +29,11 @@ class ViewProduct extends React.Component {
     }
 
     return (
-      <div>
+      <div className="product-container">
+        <img src={this.state.product.images[0].url} alt="" />
         <h1>{this.state.product.title}</h1>
         <h4>{this.state.product.description}</h4>
-        <img src={this.state.product.images[0].url} alt="" />
+        
       </div>
     )
   }
