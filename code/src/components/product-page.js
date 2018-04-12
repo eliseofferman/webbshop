@@ -31,8 +31,8 @@ class ViewProduct extends React.Component {
     return (
       <div className="product-container">
         <img src={this.state.product.images[0].url} alt="" />
-        <h1>{this.state.product.title}</h1>
-        <h4>{this.state.product.description}</h4>
+        <h5>{this.state.product.title}</h5>
+        <p>{this.state.product.description}</p>
         <button className="button">Add to bag</button>
       </div>
     )
