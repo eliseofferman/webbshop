@@ -55,7 +55,7 @@ class ListProducts extends React.Component {
     }
 
     return (
-      <div>
+      <div className="home-link">
         <Link to="/">Home/</Link> {this.props.match.params.categoryXXX}
       </div>
     )
