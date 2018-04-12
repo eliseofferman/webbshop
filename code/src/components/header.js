@@ -9,14 +9,11 @@ class Header extends React.Component {
     return (
       <div className="header-image">
         <Link to="/">
-          {" "}
-          <img src={logo} />{" "}
+          <img src={logo} alt="Tictail" />
         </Link>
 
-        {/* <div> */}
-        <img src={logoCactus} />
-        <h2>Catus</h2>
-        {/* </div> */}
+        <img src={logoCactus} alt="shopname-logo-cactus" />
+        <h1>Cactus</h1>
       </div>
     )
   }

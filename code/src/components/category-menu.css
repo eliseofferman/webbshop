@@ -1,6 +1,6 @@
 .category-left {
 	margin-right: 30px;
-	border-right: 1px solid tomato;
+	border-right: 1px solid hotpink;
 	padding-right: 30px;
 }
 
@@ -12,7 +12,5 @@
 		justify-content: space-between;
 		margin: 0;
 		width: 100%;
-	}
-	.category-left a {
 	}
 }

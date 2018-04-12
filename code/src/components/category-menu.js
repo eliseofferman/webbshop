@@ -16,7 +16,7 @@ class Category extends React.Component {
     // console.log(this.props.htmlCategoryes);
     return (
       <div className="category-left">
-        <h5>Categorys</h5>
+        <h4>Categorys</h4>
         {this.renderCategorys()}
 
         {/* <Link to="/category/banana"> banana </Link>
