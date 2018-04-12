@@ -33,7 +33,7 @@ class ViewProduct extends React.Component {
         <img src={this.state.product.images[0].url} alt="" />
         <h1>{this.state.product.title}</h1>
         <h4>{this.state.product.description}</h4>
-        
+        <button className="button">Add to bag</button>
       </div>
     )
   }
