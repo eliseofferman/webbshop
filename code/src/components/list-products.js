@@ -8,9 +8,7 @@ class ListProducts extends React.Component {
     super(props)
     this.state = {
       allProducts: [],
-
       categoryNumber: null
-      // allCategories: []
     }
   }
 

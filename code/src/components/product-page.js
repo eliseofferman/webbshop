@@ -1,4 +1,5 @@
 import React from "react"
+import Price from "./price"
 import { Link } from "react-router-dom"
 import "./product-page.css"
 
@@ -34,6 +35,7 @@ class ViewProduct extends React.Component {
         <h5>{this.state.product.title}</h5>
         <p>{this.state.product.description}</p>
         <button className="button">Add to bag</button>
+        <Price product={this.state.product} />
       </div>
     )
   }

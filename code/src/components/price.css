@@ -1,0 +1,7 @@
+.original-price {
+	text-decoration: line-through;
+}
+
+.sales-price {
+	color: tomato;
+}
