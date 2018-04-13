@@ -22,7 +22,6 @@ class Product extends React.Component {
     } else {
       imagelink = placeholderImage
     }
-    console.log(hasImage)
 
     return (
       <div className="product">

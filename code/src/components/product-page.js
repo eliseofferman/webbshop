@@ -1,6 +1,5 @@
 import React from "react"
 import Price from "./price"
-import { Link } from "react-router-dom"
 import "./product-page.css"
 
 class ViewProduct extends React.Component {
@@ -13,7 +12,6 @@ class ViewProduct extends React.Component {
 
   componentDidMount() {
     const productID = this.props.match.params.productID
-    console.log("productID", productID)
     fetch(`https://api.tictail.com/v1.26/stores/5HSQ/products/${productID}`)
       .then(respons => respons.json())
       .then(respons => {
@@ -23,8 +21,8 @@ class ViewProduct extends React.Component {
         console.log(error)
       })
   }
+
   render() {
-    console.log(this.state.product)
     if (!this.state.product) {
       return <p>The product is loading...</p>
     }

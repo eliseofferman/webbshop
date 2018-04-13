@@ -7,8 +7,7 @@ class ListProducts extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      allProducts: [],
-      categoryNumber: null
+      allProducts: []
     }
   }
 
@@ -39,9 +38,7 @@ class ListProducts extends React.Component {
         <Link to={`/product/${product.id}`}>
           <Product item={product} />
         </Link>
-      )) // Skapa div
-    // invinseble return before <
-
+      ))
     return products
   }
 
@@ -61,15 +58,11 @@ class ListProducts extends React.Component {
 
   render() {
     const categoryName = this.props.match.params.categoryXXX
-
-    const nrOfProducts = this.renderproducts(categoryName).length
+    // const nrOfProducts = this.renderproducts(categoryName).length
 
     return (
       <div>
-        <h4>
-          {this.renderBreadCrumbs()}
-          {/* All {categoryName}({nrOfProducts}) */}
-        </h4>
+        <h4>{this.renderBreadCrumbs()}</h4>
         <div className="list-products">{this.renderproducts(categoryName)}</div>
       </div>
     )

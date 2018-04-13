@@ -33,10 +33,10 @@
 }
 
 body {
-	margin: 0;
-	padding: 0;
 	font-family: "Tictail Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 13px;
+	margin: 0;
+	padding: 0;
 }
 
 h1 {
@@ -45,17 +45,18 @@ h1 {
 	margin-top: 18px;
 }
 
-h4, .home-link a{
+h4,
+.home-link a {
 	color: #171b1f;
-	line-height: 23px;
 	font-size: 18px;
+	line-height: 23px;
 	margin: 0px 0px 30px 0px;
 }
 
 h5 {
 	color: #171b1f;
-	line-height: 23px;
 	font-size: 18px;
+	line-height: 23px;
 	margin: 10px 0px 10px 0px;
 }
 
@@ -67,7 +68,7 @@ a {
 
 p {
 	color: #171b1f;
-	line-height: 23px;
 	font-size: 13px;
 	font-weight: 400;
+	line-height: 23px;
 }
