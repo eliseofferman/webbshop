@@ -44,6 +44,7 @@ class ListProducts extends React.Component {
 
   renderBreadCrumbs() {
     const isHomePage = !this.props.match.params.categoryXXX
+    console.log("test", this.props.match.params.categoryXXX);
 
     if (isHomePage) {
       return "Home/"
