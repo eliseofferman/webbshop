@@ -46,7 +46,6 @@ class App extends React.Component {
 	    .then(respons => respons.json())
 	    .then(respons => {
 	      console.log(respons)
-
 	      this.setState({ cart: respons })
 	    })
 	}
@@ -57,13 +56,14 @@ class App extends React.Component {
 	    <BrowserRouter>
 	      <div className="main-container">
 	        <Header />
-
-	        {this.state.cart && (
-	          <a href={`https://tictail.com/checkout?cart_token=${this.state.cart.token}`}>
-	            {" "}
-	            {this.state.cart.items.length}{" "}
-	          </a>
-	        )}
+	        <p className="cart-text">
+	          {this.state.cart && (
+	            <a href={`https://tictail.com/checkout?cart_token=${this.state.cart.token}`}>
+	              <span>Go to cart</span>
+								({this.state.cart.items.length})
+	            </a>
+	          )}
+	        </p>
 	        <div className="container-wrapper">
 	          <div className="top-container">
 	            <Category categorys={this.state.allCategories} />

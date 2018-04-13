@@ -54,7 +54,6 @@ class ViewProduct extends React.Component {
 	  console.log(this.props)
 	  return (
 	    <div className="product-container">
-	      <Link to="/"> Home </Link>
 	      <img src={this.state.product.images[0].url} alt="" />
 	      <h5>{this.state.product.title}</h5>
 	      <p>{this.state.product.description}</p>
