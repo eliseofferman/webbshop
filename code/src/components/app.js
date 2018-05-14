@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter, Route } from "react-router-dom"
+import { HashRouter, Route } from "react-router-dom"
 import ListProducts from "./list-products.js"
 import Category from "./category-menu"
 import Header from "./header"
@@ -53,7 +53,7 @@ class App extends React.Component {
 	render() {
 	  console.log(this.state)
 	  return (
-	    <BrowserRouter>
+	    <HashRouter>
 	      <div className="main-container">
 	        <Header />
 	        <p className="cart-text">
@@ -73,14 +73,14 @@ class App extends React.Component {
 	            <Route exact path="/" component={ListProducts} />
 	            <Route path="/category/:categoryXXX" component={ListProducts} />
 	            <Route
-  path="/product/:productID"
-  render={props => (
+                path="/product/:productID"
+                render={props => (
 	                <ViewProduct cart={this.state.cart} updateCart={this.updateCart} {...props} />
 	              )} />
 	          </div>
 	        </div>
 	      </div>
-	    </BrowserRouter>
+	    </HashRouter>
 	  )
 	}
 }
